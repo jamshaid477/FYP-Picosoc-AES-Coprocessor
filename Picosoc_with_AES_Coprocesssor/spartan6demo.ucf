@@ -1,0 +1,24 @@
+# Clock Input (100 MHz oscillator)
+NET "clk" LOC = "V10" | IOSTANDARD = LVCMOS33;
+
+# UART Interface (USB-UART FT232 chip)
+NET "ser_tx" LOC = "N18" | IOSTANDARD = LVCMOS33;  # FPGA receives TX from PC
+NET "ser_rx" LOC = "N17" | IOSTANDARD = LVCMOS33;  # FPGA sends RX to PC
+
+# SPI Flash Interface (Micron NP5Q128A13ESFC0E SPI PCM)
+NET "flash_csb"  LOC = "L18" | IOSTANDARD = LVCMOS33;  # CS#
+NET "flash_clk"  LOC = "M16" | IOSTANDARD = LVCMOS33;  # SCK
+NET "flash_io0"  LOC = "R10" | IOSTANDARD = LVCMOS33;  # SDI / DQ0
+NET "flash_io1"  LOC = "H18" | IOSTANDARD = LVCMOS33;  # SDO / DQ1
+NET "flash_io2"  LOC = "V4"  | IOSTANDARD = LVCMOS33;  # WP#  / DQ2
+NET "flash_io3"  LOC = "L15" | IOSTANDARD = LVCMOS33;  # HOLD#/DQ3
+
+# LEDs (LD0 - LD7)
+NET "leds[0]" LOC = "U16" | IOSTANDARD = LVCMOS33;
+NET "leds[1]" LOC = "V16" | IOSTANDARD = LVCMOS33;
+NET "leds[2]" LOC = "U15" | IOSTANDARD = LVCMOS33;
+NET "leds[3]" LOC = "V15" | IOSTANDARD = LVCMOS33;
+NET "leds[4]" LOC = "M11" | IOSTANDARD = LVCMOS33;
+NET "leds[5]" LOC = "N11" | IOSTANDARD = LVCMOS33;
+NET "leds[6]" LOC = "R11" | IOSTANDARD = LVCMOS33;
+NET "leds[7]" LOC = "T11" | IOSTANDARD = LVCMOS33;
